@@ -11,6 +11,7 @@ const App = () => {
         <Header />
         <Navbar />
         <Profile />
+        <p>test</p>
         </div>
     );
 }
