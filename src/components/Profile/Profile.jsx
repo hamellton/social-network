@@ -1,12 +1,13 @@
-import React from 'react';
+import React from 'react'
+import classes from './Profile.module.css'
+
  const Profile = () => {
      return(
-        <div className='content'> 
+        <div className={classes.content}> 
         <div>
         <img src="https://s3.tproger.ru/uploads/2019/01/react-girl-770x270.jpg" /> </div>
         <div>
         <div>
-            {/* <img src="" /> */}
             ava + description
         </div>
 
@@ -15,10 +16,12 @@ import React from 'react';
             <div>
                 new post
             </div>
-            <div>
+            <div className={classes.posts}>
+            <div className={classes.item}>
                 post 1
             </div>
-            <div>Post 2</div>
+            <div className={classes.item}>Post 2</div>
+            </div>
         </div>
         </div>
         
@@ -26,4 +29,4 @@ import React from 'react';
  )
  }
 
- export default Profile;
+ export default Profile
