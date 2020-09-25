@@ -1,0 +1,13 @@
+.content {
+    grid-area: c;
+    background-color: cadetblue;
+}
+
+.item {
+    color: white;
+}
+
+.item img {
+    width: 7%;
+    border-radius: 50%;
+}

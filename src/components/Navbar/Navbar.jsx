@@ -1,7 +1,8 @@
 import React from 'react'
 import classes from './Navbar.module.css'
 
-console.log(classes)
+//Learning React
+// console.log(classes)
 // let c1 = "item"
 // let c2 = "active"
 
@@ -11,10 +12,10 @@ console.log(classes)
  const Navbar = () => {
      return(
         <nav className={classes.nav}>
-        <div className={`${classes.item} ${classes.active}`}><a>Profile</a></div>
+        <div className={`${classes.item}`}><a>Profile</a></div>
         <div className={`${classes.item} ${classes.active}`}><a>Messages</a></div>
-        <div className={`${classes.item} ${classes.active}`}><a>News</a></div>
-        <div className={`${classes.item} ${classes.active}`}><a>Music</a></div>
+        <div className={`${classes.item}`}><a>News</a></div>
+        <div className={`${classes.item}`}><a>Music</a></div>
     </nav>
  )
  }
