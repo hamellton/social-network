@@ -7,8 +7,8 @@ const Post = (props) => {
         <div className={classes.item}>
             <img src="https://bestbonusmoney.com/wp-content/themes/bestbonus_light/incognito.jpg" />
             {props.message}
-                <div>
-                <span>{props.like} : {props.likeCounter}</span>
+            <div>
+                <span>{props.likes} : {props.likesCounter}</span>
             </div>
         </div>
     )
