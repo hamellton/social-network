@@ -8,6 +8,12 @@
     text-align: center;
     padding: 20px 0 0 0;
 }
+.item a {
+    color: white;
+}
+.item a.active {
+    color: teal;
+}
 
 .nav .active {
     color: #be1522;
