@@ -7,17 +7,17 @@ const Dialogs = (props) => {
         <div className={classes.dialogs}>
             <div className={classes.dialogsItems}>
                 <div className={classes.dialog + ' ' + classes.active}>
-                    Kostya
-            </div>
+                    <NavLink to="/dialogs/1">Kostya</NavLink>
+                </div>
                 <div className={classes.dialog}>
-                    Vladilen
-            </div>
+                    <NavLink to="/dialogs/2">Vladilen</NavLink>
+                </div>
                 <div className={classes.dialog}>
-                    Masha
-            </div>
+                    <NavLink to="/dialogs/3">Masha</NavLink>
+                </div>
                 <div className={classes.dialog}>
-                    Viktor
-            </div>
+                    <NavLink to="/dialogs/4">Viktor</NavLink>
+                </div>
             </div>
             <div className={classes.messages}>
                 <div className={classes.message}>Yo</div>
