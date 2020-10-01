@@ -1,20 +1,30 @@
 .dialogs {
 display: grid;
 grid-template-columns: 2fr 10fr;
+padding: 20px;
 }
 .dialogsItems .dialog {
-color: white;
-text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 0 0 0;
 }
 .messages {
 
 }
-.messages .mesaage {
-
+.messages .message {
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 0 0 0;
 }
 .dialogsItems {
 padding: 10px;
 }
-.dialogsItems .active{
+.dialogsItems .dialog a{
+    text-decoration: none;
+    color: #13ce66;
+font-family: Arial, Helvetica, sans-serif;
+    }
+
+.dialogsItems a.activeLink{
 color: teal;
 }
