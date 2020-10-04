@@ -1,0 +1,16 @@
+.dialog {
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 0 0 0;
+    padding: 10px;
+}
+
+.dialog a {
+    text-decoration: none;
+    color: #13ce66;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a.activeLink {
+    color: teal;
+}
