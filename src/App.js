@@ -12,25 +12,26 @@ import Profile from './components/Profile/Profile'
 const App = (props) => {
 // let renderProfile = (props) => <Profile posts={props.posts} />
 // let renderDialogs = () => <Dialogs />
-let renderNews = () => <News />
-let renderMusic = () => <Music />
-let renderSettings = () => <Settings />
+// let renderNews = () => <News />
+// let renderMusic = () => <Music />
+// let renderSettings = () => <Settings />
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
                 <Header />
                 <Navbar />
                 <div class='app-wrapper-content'>
-                    <Route path='/profile' render={() => <Profile posts={props.posts} />} />
-                    <Route path='/dialogs' render={() => <Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData} />} />
+                    <Route path='/profile' render={() => <Profile posts={props.state.profilePage.posts} />} />
+                    <Route path='/dialogs' render={() => <Dialogs dialogsData={props.state.dialogsPage.dialogsData} 
+                    messagesData={props.state.dialogsPage.messagesData} />} />
                     <Route path='/news' render={() => <News />} />
                     <Route path='/music' render={() => <Music />} />
                     <Route path='/settings' render={() => <Settings />} />
-                    {/* <Route path='/profile' component={renderProfile} /> */}
-                    {/* <Route path='/dialogs' component={renderDialogs} /> */}
+                    {/* <Route path='/profile' component={renderProfile} />
+                    <Route path='/dialogs' component={renderDialogs} />
                     <Route path='/news' component={renderNews} />
                     <Route path='/music' component={renderMusic} />
-                    <Route path='/settings' component={renderSettings} />
+                    <Route path='/settings' component={renderSettings} /> */}
                 </div>
 
 
