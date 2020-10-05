@@ -1,10 +1,15 @@
 .dialog {
     font-size: 16px;
     text-align: center;
-    padding: 20px 0 0 0;
-    padding: 10px;
-}
+    padding: 20px 0 0 20px;
 
+}
+.imgProfile img {
+    width: 30%;
+    height: 45px;
+    border-radius: 50%;
+    float: left;
+}
 .dialog a {
     text-decoration: none;
     color: #13ce66;
@@ -13,4 +18,11 @@
 
 a.activeLink {
     color: teal;
+}
+.dialogsBlocks {
+    width: 100%;
+    height: 60px;
+}
+.dialogName {
+    padding-top: 10px;
 }

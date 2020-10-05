@@ -9,11 +9,13 @@ const MyPosts = (props) => {
         <div className={classes.postsBlock}>
             <h3>My Posts</h3>
             <div>
-                <textarea></textarea>
+                <center><textarea></textarea></center>
             </div>
             <div>
-                <button>add post</button>
-                <button>delete post</button>
+                <center>
+                    <button>add post</button>
+                    <button>delete post</button>
+                </center>
             </div>
 
             <div className={classes.posts}>

@@ -20,3 +20,7 @@
 .nav a {
     color: white;
 }
+.containerSidebar {
+    width: 100%;
+    margin-top: 50%;
+}

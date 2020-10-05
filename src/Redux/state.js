@@ -18,8 +18,14 @@ let state = {
             { id: 3, name: 'Masha' },
             { id: 4, name: 'Viktor' }
         ]
+    },
+    sideBar : {
+        sidebar : [
+            {id: 1, name: 'Dasha'},
+            {id: 2, name: 'Pasha'},
+            {id:3, name: 'Karina'}
+        ]
     }
-
 }
 
 export default state
