@@ -8,6 +8,13 @@ const Dialogs = (props) => {
     let dialogsElements = props.dialogsData.map(dialog => (<DialogItem id={dialog.id} name={dialog.name} />))
     let messagesElement = props.messagesData.map(message => (<Message message={message.message} id={message.id} />))
 
+    let messageElements = React.createRef()
+
+    let addMessage = () => {
+        let text = messageElements.current.value
+        alert(text)
+    }
+
     return (
         <div className={classes.dialogs}>
             <div className={classes.dialogsItems}>
@@ -19,6 +26,17 @@ const Dialogs = (props) => {
                 {
                     messagesElement
                 }
+                <div className={classes.correspondence}>
+                    <center>
+                    <div>
+                        <textarea ref={messageElements}></textarea>
+                    </div>
+                    <div>
+                        <button onClick={addMessage}>send message</button>
+                    </div>
+                    </center>
+
+                </div>
             </div>
         </div>
     )

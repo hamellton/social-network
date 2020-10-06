@@ -3,3 +3,8 @@
     grid-template-columns: 2fr 10fr;
     padding: 30px;
 }
+.correspondence textarea{
+    text-align: center;
+    margin-top: 7%;
+    width: 50%;
+}
