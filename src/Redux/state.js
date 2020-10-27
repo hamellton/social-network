@@ -31,13 +31,17 @@ let state = {
 }
 
 export let addPost = (postsMessage) => {
-    debugger
-    let newPost = {
+        let newPost = {
         id: 3,
         message: postsMessage,
         likesCounter: 0
     }
     state.profilePage.posts.push(newPost)
+    rerenderEntireTree(state)
+}
+
+export let deletePost = (postDelete) => {
+    state.dialogsPage.messagesData.pop(postDelete)
     rerenderEntireTree(state)
 }
 

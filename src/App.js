@@ -10,28 +10,17 @@ import Navbar from './components/Navbar/Navbar'
 import Profile from './components/Profile/Profile'
 
 const App = (props) => {
-    // let renderProfile = (props) => <Profile posts={props.posts} />
-    // let renderDialogs = () => <Dialogs />
-    // let renderNews = () => <News />
-    // let renderMusic = () => <Music />
-    // let renderSettings = () => <Settings />
     return (
         <div className='app-wrapper'>
             <Header />
             <Navbar state={props.state.sideBar} />
             <div className='app-wrapper-content'>
                 <Route path='/profile' render={() => <Profile posts={props.state} addPost={props.addPost} />} />
-                {/* <Route path='/profile' render={() => <Profile posts={props.state.profilePage.posts} />} /> */}
                 <Route path='/dialogs' render={() => <Dialogs dialogsData={props.state.dialogsPage.dialogsData}
                     messagesData={props.state.dialogsPage.messagesData} />} />
                 <Route path='/news' render={() => <News />} />
                 <Route path='/music' render={() => <Music />} />
                 <Route path='/settings' render={() => <Settings />} />
-                {/* <Route path='/profile' component={renderProfile} />
-                    <Route path='/dialogs' component={renderDialogs} />
-                    <Route path='/news' component={renderNews} />
-                    <Route path='/music' component={renderMusic} />
-                    <Route path='/settings' component={renderSettings} /> */}
             </div>
 
         </div>

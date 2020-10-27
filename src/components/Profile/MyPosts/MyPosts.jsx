@@ -5,11 +5,15 @@ import classes from './MyPosts.module.css'
 const MyPosts = (props) => {
     let postsElements = props.posts.profilePage.posts.map(posts => (<Post message={posts.message} likes="like" likesCounter={posts.likesCounter} />))
 
-    let newPostElement = React.createRef();
+    let newPostElement = React.createRef()
+
     let addPost = () => {
         let text = newPostElement.current.value
         props.addPost(text)
         newPostElement.current.value = ''
+    }
+    let deletePostElement = () => {
+        props.deletePost(postsElements)
     }
 
     return (
@@ -21,7 +25,7 @@ const MyPosts = (props) => {
             <div>
                 <center>
                     <button onClick={addPost}>add post</button>
-                    <button>delete post</button>
+                    <button onClick={deletePostElement}>delete post</button>
                 </center>
             </div>
 
