@@ -13,7 +13,7 @@ const MyPosts = (props) => {
         newPostElement.current.value = ''
     }
     let deletePostElement = () => {
-        props.deletePost(postsElements)
+        props.deletePost()
     }
 
     return (
@@ -25,7 +25,7 @@ const MyPosts = (props) => {
             <div>
                 <center>
                     <button onClick={addPost}>add post</button>
-                    <button onClick={deletePostElement}>delete post</button>
+                    <button onClick={deletePostElement}>delete last post</button>
                 </center>
             </div>
 

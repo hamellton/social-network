@@ -1,4 +1,6 @@
-import { rerenderEntireTree } from "../render"
+let rerenderEntireTree = () => {
+
+}
 
 let state = {
     profilePage: {
@@ -29,20 +31,25 @@ let state = {
         ]
     }
 }
+window.state = state
 
-export let addPost = (postsMessage) => {
+export const addPost = (postsMessage) => {
         let newPost = {
         id: 3,
         message: postsMessage,
         likesCounter: 0
     }
     state.profilePage.posts.push(newPost)
-    rerenderEntireTree(state)
+    rerenderEntireTree()
 }
 
-export let deletePost = (postDelete) => {
-    state.dialogsPage.messagesData.pop(postDelete)
-    rerenderEntireTree(state)
+export const deletePost = () => {
+    state.profilePage.posts.pop()
+    rerenderEntireTree()
+}
+
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer
 }
 
 export default state
