@@ -1,6 +1,10 @@
-let rerenderEntireTree = () => {
+// import uuid from 'react-uuid'  // for autogeneration id
 
+let rerenderEntireTree = () => {
+console.log('state changed')
 }
+
+let idPost = 3
 
 let state = {
     profilePage: {
@@ -35,21 +39,21 @@ window.state = state
 
 export const addPost = (postsMessage) => {
         let newPost = {
-        id: 3,
+        id: idPost++,
         message: postsMessage,
         likesCounter: 0
     }
     state.profilePage.posts.push(newPost)
-    rerenderEntireTree()
+    rerenderEntireTree(state)
 }
 
 export const deletePost = () => {
     state.profilePage.posts.pop()
-    rerenderEntireTree()
+    rerenderEntireTree(state)
 }
 
 export const subscribe = (observer) => {
-    rerenderEntireTree = observer
+    rerenderEntireTree = observer //observer слушатель, паттерн
 }
 
 export default state
