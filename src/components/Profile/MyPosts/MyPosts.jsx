@@ -15,12 +15,16 @@ const MyPosts = (props) => {
     let deletePostElement = () => {
         props.deletePost()
     }
+    let onPostChanged = () => {
+        let text = newPostElement.current.value
+        props.updateNewPostText(text)
+    }
 
     return (
         <div className={classes.postsBlock}>
             <h3>My Posts</h3>
             <div>
-                <center><textarea ref={newPostElement}></textarea></center>
+                <center><textarea onChange={onPostChanged} ref={newPostElement}></textarea></center>
             </div>
             <div>
                 <center>

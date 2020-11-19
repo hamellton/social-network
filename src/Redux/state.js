@@ -9,7 +9,8 @@ let store = {
             posts : [
                 { id: 1, message: 'it\'s my first post', likesCounter: 64 },
                 { id: 2, message: 'it\'s my second post', likesCounter: 58 }
-              ]
+              ],
+              newPostText: 'SPA Ract - Redux'
         },
         dialogsPage : {
             messagesData : [
@@ -33,12 +34,19 @@ let store = {
             ]
         }
     },
-    getState() {
-        return this._state
-    },
     _callSubscriber() {
         console.log('state changed')
     },
+
+
+    getState() {
+        return this._state
+    },
+    subscribe(observer) {
+        this._callSubscriber = observer //observer слушатель, паттерн
+    },
+
+
     addPost(postsMessage) {
             let newPost = {
             id: this._idPosts.id++,
@@ -46,15 +54,20 @@ let store = {
             likesCounter: 0
         }
         this._state.profilePage.posts.push(newPost)
+        this._state.profilePage.newPostText = ''
         // console.log(this._state.profilePage.posts)
+        this._callSubscriber(this._state)
+    },
+    updateNewPostText(newText) {
+        this._state.profilePage.newPostText = newText
         this._callSubscriber(this._state)
     },
     deletePost() {
         this._state.profilePage.posts.pop()
         this._callSubscriber(this._state)
     },
-    subscribe(observer) {
-        this._callSubscriber = observer //observer слушатель, паттерн
+    dispath(action) {
+
     }
 }
 
