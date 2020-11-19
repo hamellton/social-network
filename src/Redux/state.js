@@ -66,8 +66,20 @@ let store = {
         this._state.profilePage.posts.pop()
         this._callSubscriber(this._state)
     },
-    dispath(action) {
-
+    dispath(action) { // {type: 'ADD-POST'}
+        if (action.type === 'ADD-POST') {
+            let newPost = {
+                id: this._idPosts.id++,
+                message: this.postsMessage,
+                likesCounter: 0
+            }
+            this._state.profilePage.posts.push(newPost)
+            this._state.profilePage.newPostText = ''
+            this._callSubscriber(this._state)
+        } else if (action.type === 'APDATE-NEW-POST-TEXT') {
+            this._state.profilePage.newPostText = this.newText
+            this._callSubscriber(this._state)
+        }
     }
 }
 
