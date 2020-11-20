@@ -7,7 +7,7 @@ const DialogItem = (props) => {
         <div className={classes.dialog + ' ' + classes.active}>
             <div className={classes.dialogsBlocks}>
                 <div className={classes.imgProfile}>
-                    <img src="https://bestbonusmoney.com/wp-content/themes/bestbonus_light/incognito.jpg" />
+                    <img src="https://bestbonusmoney.com/wp-content/themes/bestbonus_light/incognito.jpg" alt="" />
                 </div>
                 <div className={classes.dialogName}>
                 <NavLink to={"/dialogs/" + props.id}
