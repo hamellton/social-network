@@ -47,20 +47,20 @@ let store = {
     },
 
 
-    addPost(postsMessage) {
+    addPost() {
             let newPost = {
             id: this._idPosts.id++,
-            message: postsMessage,
+            message: this._state.profilePage.newPostText,
             likesCounter: 0
         }
         this._state.profilePage.posts.push(newPost)
-        this._state.profilePage.newPostText = ''
-        // console.log(this._state.profilePage.posts)
+        console.log(this._state.profilePage)
         this._callSubscriber(this._state)
     },
     updateNewPostText(newText) {
         this._state.profilePage.newPostText = newText
         this._callSubscriber(this._state)
+        // console.log(this._state.profilePage)
     },
     deletePost() {
         this._state.profilePage.posts.pop()
@@ -76,7 +76,7 @@ let store = {
             this._state.profilePage.posts.push(newPost)
             this._state.profilePage.newPostText = ''
             this._callSubscriber(this._state)
-        } else if (action.type === 'APDATE-NEW-POST-TEXT') {
+        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
             this._state.profilePage.newPostText = this.newText
             this._callSubscriber(this._state)
         }
