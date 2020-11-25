@@ -16,10 +16,7 @@ const MyPosts = (props) => {
         props.dispatch({type: 'UPDATE-NEW-POST-TEXT'})
     }
     let deletePostElement = () => {
-        props.deletePost()
-    }
-    let deletePostElement = () => {
-        props.deletePost()
+        props.dispatch()
     }
 
     return (
