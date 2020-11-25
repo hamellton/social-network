@@ -54,7 +54,10 @@ let store = {
             likesCounter: 0
         }
         this._state.profilePage.posts.push(newPost)
+<<<<<<< HEAD
         this._state.profilePage.newPostText = ''
+=======
+>>>>>>> 723031d15e43e2dc924988e750e77ad9af91843f
         console.log(this._state.profilePage)
         this._callSubscriber(this._state)
     },

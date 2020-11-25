@@ -18,6 +18,9 @@ const MyPosts = (props) => {
     let deletePostElement = () => {
         props.deletePost()
     }
+    let deletePostElement = () => {
+        props.deletePost()
+    }
 
     return (
         <div className={classes.postsBlock}>
