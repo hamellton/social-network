@@ -10,7 +10,7 @@ let store = {
                 { id: 1, message: 'it\'s my first post', likesCounter: 64 },
                 { id: 2, message: 'it\'s my second post', likesCounter: 58 }
               ],
-              newPostText: 'SPA Ract - Redux'
+              newPostText: ''
         },
         dialogsPage : {
             messagesData : [
@@ -54,6 +54,7 @@ let store = {
             likesCounter: 0
         }
         this._state.profilePage.posts.push(newPost)
+        this._state.profilePage.newPostText = ''
         console.log(this._state.profilePage)
         this._callSubscriber(this._state)
     },
@@ -66,18 +67,20 @@ let store = {
         this._state.profilePage.posts.pop()
         this._callSubscriber(this._state)
     },
-    dispath(action) { // {type: 'ADD-POST'}
+    dispatch(action) { // {type: 'ADD-POST'}
+    debugger
         if (action.type === 'ADD-POST') {
             let newPost = {
                 id: this._idPosts.id++,
-                message: this.postsMessage,
+                message: this._state.profilePage.newPostText,
                 likesCounter: 0
             }
             this._state.profilePage.posts.push(newPost)
             this._state.profilePage.newPostText = ''
+            console.log(this._state.profilePage)
             this._callSubscriber(this._state)
         } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
-            this._state.profilePage.newPostText = this.newText
+            this._state.profilePage.newPostText = action.newText
             this._callSubscriber(this._state)
         }
     }

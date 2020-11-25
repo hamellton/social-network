@@ -8,13 +8,12 @@ const MyPosts = (props) => {
     let newPostElement = React.createRef()
 
     let addPost = () => {
-        props.addPost()
-        props.updateNewPostText('')
+        props.dispatch({type: 'ADD-POST'})
         newPostElement.current.value = ''
     }
     let onPostChanged = () => {
         let text = newPostElement.current.value
-        props.updateNewPostText(text)
+        props.dispatch({type: 'UPDATE-NEW-POST-TEXT'})
     }
     let deletePostElement = () => {
         props.deletePost()
