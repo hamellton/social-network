@@ -70,7 +70,7 @@ let store = {
 
 export const addPostActionCreator = () => ({type: ADD_POST})
 export const updateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT,newText: text})
-export const deltePostElement = () => ({type: DELETE_POST})
+export const deltePostElementActionCreator = () => ({type: DELETE_POST})
 
 window.store = store
 

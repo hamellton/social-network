@@ -1,5 +1,5 @@
 import React from 'react'
-import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../Redux/state'
+import { addPostActionCreator, deltePostElementActionCreator, updateNewPostTextActionCreator } from '../../../Redux/state'
 import Post from '../Post/Post'
 import classes from './MyPosts.module.css'
 
@@ -18,7 +18,7 @@ const MyPosts = (props) => {
         props.dispatch(action)
     }
     let deletePostElement = () => {
-        let action = deletePostElement()
+        let action = deltePostElementActionCreator()
         props.dispatch(action)
     }
 
@@ -30,8 +30,8 @@ const MyPosts = (props) => {
             </div>
             <div>
                 <center>
-                    <button onClick={addPost}>add post</button>
-                    <button onClick={deletePostElement}>delete last post</button>
+                    <button className={classes.btn} onClick={addPost}>add post</button>
+                    <button className={classes.btn} onClick={deletePostElement}>delete last post</button>
                 </center>
             </div>
 
