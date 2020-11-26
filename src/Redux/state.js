@@ -1,5 +1,8 @@
-
 // import { v4 as uuidv4 } from 'uuid';  // for autogeneration id
+const ADD_POST = 'ADD-POST' 
+const DELETE_POST = 'DELETE-POST'
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
+
 let store = {
     _idPosts: {
         id: 3,
@@ -45,31 +48,8 @@ let store = {
     subscribe(observer) {
         this._callSubscriber = observer //observer слушатель, паттерн
     },
-
-
-    addPost() {
-            let newPost = {
-            id: this._idPosts.id++,
-            message: this._state.profilePage.newPostText,
-            likesCounter: 0
-        }
-        this._state.profilePage.posts.push(newPost)
-        this._state.profilePage.newPostText = ''
-        console.log(this._state.profilePage)
-        this._callSubscriber(this._state)
-    },
-    updateNewPostText(newText) {
-        this._state.profilePage.newPostText = newText
-        this._callSubscriber(this._state)
-        // console.log(this._state.profilePage)
-    },
-    deletePost() {
-        this._state.profilePage.posts.pop()
-        this._callSubscriber(this._state)
-    },
     dispatch(action) { // {type: 'ADD-POST'}
-    debugger
-        if (action.type === 'ADD-POST') {
+        if (action.type === ADD_POST) {
             let newPost = {
                 id: this._idPosts.id++,
                 message: this._state.profilePage.newPostText,
@@ -77,14 +57,20 @@ let store = {
             }
             this._state.profilePage.posts.push(newPost)
             this._state.profilePage.newPostText = ''
-            console.log(this._state.profilePage)
             this._callSubscriber(this._state)
-        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+        } else if (action.type === UPDATE_NEW_POST_TEXT) {
             this._state.profilePage.newPostText = action.newText
+            this._callSubscriber(this._state)
+        } else if (action.type === DELETE_POST) {
+            this._state.profilePage.posts.pop()
             this._callSubscriber(this._state)
         }
     }
 }
+
+export const addPostActionCreator = () => ({type: ADD_POST})
+export const updateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT,newText: text})
+export const deltePostElement = () => ({type: DELETE_POST})
 
 window.store = store
 
