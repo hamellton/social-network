@@ -1,5 +1,5 @@
 import React from 'react'
-import { addPostActionCreator, deltePostElementActionCreator, updateNewPostTextActionCreator } from '../../../Redux/state'
+import { addPostActionCreator, deltePostElementActionCreator, updateNewPostTextActionCreator } from '../../../Redux/profileReducer'
 import Post from '../Post/Post'
 import classes from './MyPosts.module.css'
 
@@ -26,7 +26,7 @@ const MyPosts = (props) => {
         <div className={classes.postsBlock}>
             <h3>My Posts</h3>
             <div>
-                <center><textarea onChange={onPostChanged} ref={newPostElement} /></center>
+                <center><textarea onChange={onPostChanged} ref={newPostElement} placeholder='enter your post' /></center>
             </div>
             <div>
                 <center>
