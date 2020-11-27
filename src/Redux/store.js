@@ -53,9 +53,9 @@ let store = {
         this._callSubscriber = observer //observer слушатель, наблюдатель, паттерн
     },
     dispatch(action) {
-        profileReducer(this._state.profilePage, action)
-        dialogsReduscer(this._state.dialogsPage, action)
-        sidebarReducer(this._state.sideBar, action)
+        this._state.profilePage = profileReducer(this._state.profilePage, action)
+        this._state.dialogsPage = dialogsReduscer(this._state.dialogsPage, action)
+        this._state.sideBar = sidebarReducer(this._state.sideBar, action)
 
         this._callSubscriber(this._state)
     }
@@ -64,5 +64,3 @@ let store = {
 window.store = store
 
 export default store
-// STORE = OOP!!!
-

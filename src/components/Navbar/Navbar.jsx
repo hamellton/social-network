@@ -5,6 +5,7 @@ import classes from './Navbar.module.css'
 
 
 const Navbar = (props) => {
+    debugger
     let sideBar = props.state.sidebar.map(test => (<Sidebar name={test.name} />))
     return (
         <div className={classes.nav}>
