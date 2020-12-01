@@ -5,9 +5,9 @@ const { createStore, combineReducers } = require("redux");
 
 
 let reducers = combineReducers({
-    profileReducer,
-    dialogsReduscer,
-    sidebarReducer
+    profilePage: profileReducer,
+    dialogsPage: dialogsReduscer,
+    sideBar: sidebarReducer
 })
 
 let store = createStore(reducers)
