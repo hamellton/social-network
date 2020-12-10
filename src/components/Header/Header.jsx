@@ -5,7 +5,7 @@ const Header = () => {
     return (
 
         <header className={classes.header}>
-            <img src="https://shop.dinternal.com.ua/wp-content/uploads/2017/12/logo-shop-18.png" alt="" />
+            <img src="https://shop.dinternal.com.ua/wp-content/themes/globe-bookstore/images/logo/dinternal_education_logo.svg" alt="" />
         </header>
     )
 }
