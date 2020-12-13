@@ -13,10 +13,10 @@ let initialState = {
     },
     newMessageText: '',
     dialogsData : [
-        { id: 1, name: 'Kostya' },
-        { id: 2, name: 'Vladilen' },
-        { id: 3, name: 'Masha' },
-        { id: 4, name: 'Viktor' }
+        { id: 1, name: 'user1' },
+        { id: 2, name: 'user2' },
+        { id: 3, name: 'user3' },
+        { id: 4, name: 'user4' }
     ]
 }
 
