@@ -4,7 +4,7 @@ import './index.css'
 import App from './App'
 import store from './Redux/reduxStore'
 import {BrowserRouter} from 'react-router-dom'
-import StoreContext, {Provider} from "./StoreContext";
+import {Provider} from "react-redux";
 
 let rerenderEntireTree = (state) => {
     ReactDOM.render(
@@ -17,7 +17,6 @@ let rerenderEntireTree = (state) => {
         ,
         document.getElementById('root')
     )
-    ;
 }
 rerenderEntireTree(store.getState())
 
