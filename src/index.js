@@ -20,6 +20,8 @@ let rerenderEntireTree = (state) => {
 }
 rerenderEntireTree(store.getState())
 
+window.store = store
+
 store.subscribe(() => {
     let state = store.getState()
     rerenderEntireTree(state)

@@ -1,4 +1,3 @@
-import React from 'react'
 import {sendMessageActionCreator, updateNewMessageTextActionCreator} from '../../Redux/dialogsReducer'
 import Dialogs from "./Dialogs";
 import {connect} from "react-redux";
@@ -28,7 +27,6 @@ import {connect} from "react-redux";
 // }
 
 let mapStateToProps = (state) => {
-    debugger
     return {
         dialogsData: state.dialogsPage.dialogsData,
         messagesData: state.dialogsPage.messagesData
