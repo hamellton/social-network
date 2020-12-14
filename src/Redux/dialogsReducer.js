@@ -41,6 +41,7 @@ const dialogsReduscer = (state = initialState, action) => {
         }
         case UPDATE_NEW_MESSAGE_TEXT: {
             let copyState = {...state}
+            copyState.newMessageText = {...state.newMessageText}
             copyState.newMessageText = action.newText
             // break
             return copyState
