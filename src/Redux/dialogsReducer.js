@@ -22,23 +22,29 @@ let initialState = {
 
 const dialogsReduscer = (state = initialState, action) => {
     switch (action.type) {
-        case SEND_MESSAGE:
+        case SEND_MESSAGE: {
             let newMessage = {
                 id: state._idMessage.id++,
                 message: state.newMessageText,
             }
+            let copyState = {...state}
+            copyState.newMessageText = {...state.newMessageText}
             if (state.newMessageText.length === 0) {
                 alert('please, enter a message!!')
             } else {
-                state.messagesData.push(newMessage)
-                state.newMessageText = ''
+                copyState.messagesData = [...state.messagesData]
+                copyState.messagesData.push(newMessage)
+                copyState.newMessageText = ''
             }
             // break
-            return state
-        case UPDATE_NEW_MESSAGE_TEXT:
-            state.newMessageText = action.newText
+            return copyState
+        }
+        case UPDATE_NEW_MESSAGE_TEXT: {
+            let copyState = {...state}
+            copyState.newMessageText = action.newText
             // break
-            return state
+            return copyState
+        }
         default:
             return state
     }

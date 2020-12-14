@@ -1,6 +1,5 @@
 import {
-    addPostActionCreator,
-    deltePostElementActionCreator,
+    addPostActionCreator, deletePostElementActionCreator,
     updateNewPostTextActionCreator
 } from '../../../Redux/profileReducer'
 import MyPosts from "./MyPosts";
@@ -53,7 +52,7 @@ let mapDispatchToProps = (dispatch) => {
             dispatch(action)
         },
         deletePostElement: () => {
-            let action = deltePostElementActionCreator()
+            let action = deletePostElementActionCreator()
             dispatch(action)
         },
         addPost: () => {

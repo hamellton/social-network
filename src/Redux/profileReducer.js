@@ -15,28 +15,38 @@ let initialState = {
 
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_POST:
+        case ADD_POST: {
             let newPost = {
                 id: state._idPosts.id++,
                 message: state.newPostText,
                 likesCounter: 0
             }
-            if (state.newPostText.length === 0) {
+            let copyState = {...state}
+            copyState.newPostText = {...state.newPostText}
+            if (copyState.newPostText.length === 0) {
                 alert('please, enter a text post!!')
             } else {
-                state.posts.push(newPost)
-                state.newPostText = ''
+                copyState.posts = [...state.posts]
+                copyState.posts.push(newPost)
+                copyState.newPostText = ''
             }
-            return state
+            return copyState
             // break;
-        case UPDATE_NEW_POST_TEXT:
-            state.newPostText = action.newText
+             }
+        case UPDATE_NEW_POST_TEXT: {
+            let copyState = {...state}
+            copyState.newPostText = {...state.newPostText}
+            copyState.newPostText = action.newText
             // break
-            return state
-        case DELETE_POST:
-            state.posts.pop()
+            return copyState
+        }
+        case DELETE_POST: {
+            let copyState = {...state}
+            copyState.posts = [...state.posts]
+            copyState.posts.pop()
             // break
-            return state
+            return copyState
+        }
         default:
             return state
     }
@@ -44,6 +54,6 @@ const profileReducer = (state = initialState, action) => {
 
 export const addPostActionCreator = () => ({type: ADD_POST})
 export const updateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text})
-export const deltePostElementActionCreator = () => ({type: DELETE_POST})
+export const deletePostElementActionCreator = () => ({type: DELETE_POST})
 
 export default profileReducer
