@@ -7,8 +7,8 @@ import Header from './components/Header/Header'
 import Profile from './components/Profile/Profile'
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import NavbarContainer from "./components/Navbar/NavbarContainer";
-import UsersPage from "./components/Users/UsersPage";
 import Settings from "./components/Settings/Settings";
+import UsersContainer from "./components/Users/UsersContainer";
 
 const App = (props) => {
     return (
@@ -21,7 +21,7 @@ const App = (props) => {
                 <Route path='/news' render={() => <News />} />
                 <Route path='/music' render={() => <Music />} />
                 <Route path='/settings' render={() => <Settings />} />
-                <Route path='/users' render={() => <UsersPage />} />
+                <Route path='/users' render={() => <UsersContainer />} />
             </div>
 
         </div>
