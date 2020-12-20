@@ -1,19 +1,40 @@
 import React from "react";
-import UserElement from "./user/UserElement";
+import clasess from './UsersPage.module.css'
 
 let UsersPage = (props) => {
-    let userElement = props.users.map(el => <UserElement
-        fullname={props.users.fullName}
-        status={props.users.status}
-        location={props.users.location}
-        followed={props.users.followed}
-    />)
-
     return (
         <div>
-            <div>{userElement}</div>
-        </div>
-    )
-}
+            {props.users.map(el => {
+                return (
+                    <div key={el.id}>
+                        <span>
+                            <div className={clasess.item}>
+                                <img
+                                    src={el.photoUrl}
+                                    alt=""/>
+                            </div>
+                            <div className={clasess.btn}>
+                                <button>Follow</button>
+                            </div>
+                        </span>
+                        <span>
+                            <div className={clasess.ident}>
+                            <span>
+                                <div>{el.fullname}</div><div>{el.status}</div>
+                            </span>
+                            <span>
+                                <div>{el.location.country}</div>
+                                <div>{el.location.city}</div>
+                            </span>
+                                </div>
+                        </span>
+                    </div>
+                )
+            }
+                )
+            }
+                </div>
+                )
+            }
 
-export default UsersPage
+            export default UsersPage

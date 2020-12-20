@@ -1,0 +1,22 @@
+.content {
+    grid-area: c;
+    background-color: #ecf0f1;
+}
+
+.item {
+    margin-top: 2%;
+    margin-left: 5%;
+    color: teal;
+}
+.ident {
+    margin-left: 6%;
+}
+
+.btn {
+    margin-left: 6%;
+}
+
+.item img {
+    width: 9%;
+    border-radius: 50%;
+}
