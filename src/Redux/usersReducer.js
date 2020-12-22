@@ -3,11 +3,7 @@ const FOLLOW = 'FOLLOW'
 const UNFOLLOW = 'UNFOLLOW'
 
 let initialState = {
-    users : [
-        { id: 1, photoUrl: 'https://bestbonusmoney.com/wp-content/themes/bestbonus_light/incognito.jpg', followed: false, fullname: 'Kostya', status: 'Status1', location: {city: 'kyiv', country: 'Ukraine'} },
-        { id: 2, photoUrl: 'https://bestbonusmoney.com/wp-content/themes/bestbonus_light/incognito.jpg', followed: true, fullname: 'Jenni', status: 'Status2', location: {city: 'London', country: 'England'} },
-        { id: 3, photoUrl: 'https://bestbonusmoney.com/wp-content/themes/bestbonus_light/incognito.jpg', followed: true, fullname: 'Sam', status: 'Status3', location: {city: 'Paris', country: 'France'} },
-      ],
+    users : [],
       _idPosts: {
         id: 4,
     }

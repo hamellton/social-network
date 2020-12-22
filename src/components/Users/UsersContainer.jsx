@@ -9,7 +9,7 @@ let mapStateToProps = (state) => {
 }
 
 let mapDispatchToProps = (dispatch) => {
-	return{
+	return {
 		setUser: (userId) => {
 			let action = setUsersActionCreator(userId)
 			dispatch(action)

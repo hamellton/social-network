@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c3801bd-6b4e-4b60-9cdd-ba518ef72e51" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Users/UsersPage.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/reduxStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/reduxStore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/usersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/usersReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/UsersPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersPage.jsx" afterDir="false" />

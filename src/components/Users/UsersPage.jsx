@@ -2,6 +2,13 @@ import React from "react";
 import clasess from './UsersPage.module.css'
 
 let UsersPage = (props) => {
+    if (props.users.length === 0) {
+        props.setUser([
+            { id: 1, photoUrl: 'https://bestbonusmoney.com/wp-content/themes/bestbonus_light/incognito.jpg', followed: false, fullname: 'Kostya', status: 'Status1', location: {city: 'kyiv', country: 'Ukraine'} },
+            { id: 2, photoUrl: 'https://bestbonusmoney.com/wp-content/themes/bestbonus_light/incognito.jpg', followed: true, fullname: 'Jenni', status: 'Status2', location: {city: 'London', country: 'England'} },
+            { id: 3, photoUrl: 'https://bestbonusmoney.com/wp-content/themes/bestbonus_light/incognito.jpg', followed: true, fullname: 'Sam', status: 'Status3', location: {city: 'Paris', country: 'France'} },
+        ])
+    }
     return (
         <div>
             {props.users.map(el => {
@@ -14,7 +21,8 @@ let UsersPage = (props) => {
                                     alt=""/>
                             </div>
                             <div className={clasess.btn}>
-                                <button>Follow</button>
+                                {el.followed ? <button onClick={() => {props.unfollow(el.id)}}>follow</button> :
+                                    <button onClick={() => {props.follow(el.id)}}>unfollow</button>}
                             </div>
                         </span>
                         <span>
@@ -37,4 +45,4 @@ let UsersPage = (props) => {
                 )
             }
 
-            export default UsersPage
+export default UsersPage
