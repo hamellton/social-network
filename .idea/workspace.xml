@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3c3801bd-6b4e-4b60-9cdd-ba518ef72e51" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/usersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/usersReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/UsersPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersPage.jsx" afterDir="false" />
     </list>
@@ -65,6 +66,8 @@
       <workItem from="1607608280500" duration="7269000" />
       <workItem from="1608041370788" duration="8015000" />
       <workItem from="1608213587568" duration="10514000" />
+      <workItem from="1608808989313" duration="3059000" />
+      <workItem from="1609061556051" duration="4433000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,6 @@
-import UsersPage from "./UsersPage";
-import {followActionCreator, setUsersActionCreator, unFollowActionCreator} from "../../Redux/usersReducer";
-import {connect} from "react-redux";
+import UsersPage from "./UsersPage"
+import {followActionCreator, setUsersActionCreator, unFollowActionCreator} from "../../Redux/usersReducer"
+import {connect} from "react-redux"
 
 let mapStateToProps = (state) => {
 	return{
