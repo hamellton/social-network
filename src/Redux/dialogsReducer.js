@@ -1,7 +1,7 @@
 const SEND_MESSAGE = 'SEND-MESSAGE'
 const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT'
 
-let initialState = {
+let INITIAL_STATE = {
     messagesData : [
         { id: 1, message: 'Yo' },
         { id: 2, message: 'When start new webinar?' },
@@ -20,7 +20,7 @@ let initialState = {
     ]
 }
 
-const dialogsReduscer = (state = initialState, action) => {
+const dialogsReduscer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case SEND_MESSAGE: {
             let newMessage = {
